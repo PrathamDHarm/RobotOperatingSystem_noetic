@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/empty.world"/-->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find robot)/urdf/two_wheel_robot/two_wheel_robot.urdf.xacro" />
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model two_wheel_robot -param robot_description" />
+
+  
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find robot)/urdf/two_wheel_robot/two_wheel_robot.urdf.xacro'" />
+  <arg name="multi_robot_name" default=""/>
+  
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value="$(arg multi_robot_name)"/>
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot)/rviz/two_wheel_robot.rviz"/>
+  
+</launch>
