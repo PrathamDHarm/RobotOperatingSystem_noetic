@@ -58,7 +58,7 @@ ROS is an open-source, meta-operating system for your robot. It provides the ser
        
   # Point Cloud2 shows the 3D projection view of the camera in gazebo
 
-    ![Screenshot from 2023-01-07 14-55-36](https://user-images.githubusercontent.com/109065335/211144414-fda5776f-c510-4987-b22b-60273f8cd31c.png)
+  ![Screenshot from 2023-01-07 14-55-36](https://user-images.githubusercontent.com/109065335/211144414-fda5776f-c510-4987-b22b-60273f8cd31c.png)
     
-    ![Screenshot from 2023-01-07 14-56-06](https://user-images.githubusercontent.com/109065335/211144421-02c5cbb5-f199-47c2-8cd9-dda430075ad7.png)
+  ![Screenshot from 2023-01-07 14-56-06](https://user-images.githubusercontent.com/109065335/211144421-02c5cbb5-f199-47c2-8cd9-dda430075ad7.png)
 
