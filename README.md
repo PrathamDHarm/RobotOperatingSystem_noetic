@@ -45,7 +45,11 @@ ROS is an open-source, meta-operating system for your robot. It provides the ser
  
        $ cd ~/catkin_ws/src
 
-       $  git clone
+       $ git clone https://github.com/PrathamDHarm/RobotOperatingSystem_noetic.git
+       
+       $ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+       
+       $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 
        $ cd  . .
 
@@ -53,8 +57,8 @@ ROS is an open-source, meta-operating system for your robot. It provides the ser
  
        
   # Point Cloud2 shows the 3D projection view of the camera in gazebo
-  
-  ![Screenshot from 2023-01-07 14-42-51](https://user-images.githubusercontent.com/121598999/211144146-c3016b47-6509-47c2-b574-377d0cdce081.png)
 
-  ![Screenshot from 2023-01-07 14-42-30](https://user-images.githubusercontent.com/121598999/211144155-e57058ac-218c-48f6-a2f1-c5b74570727a.png)
+    ![Screenshot from 2023-01-07 14-55-36](https://user-images.githubusercontent.com/109065335/211144414-fda5776f-c510-4987-b22b-60273f8cd31c.png)
+    
+    ![Screenshot from 2023-01-07 14-56-06](https://user-images.githubusercontent.com/109065335/211144421-02c5cbb5-f199-47c2-8cd9-dda430075ad7.png)
 
