@@ -13,25 +13,33 @@ ROS is an open-source, meta-operating system for your robot. It provides the ser
  
    Setup your computer to accept software from packages.ros.org.
     
-       •  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+       $  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
     
   3)Set up your keys
       
-       sudo apt install curl # if you haven't already installed curl
+       $ sudo apt install curl # if you haven't already installed curl
       
-       curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+       $ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
   
   4)Make sure your Debian package index is up-to-date
     
-       • sudo apt update
+       $ sudo apt update
 
-       • sudo apt install ros-noetic-desktop-full
+       $ sudo apt install ros-noetic-desktop-full
     
   5)Now, in New terminal paste the below command
  
-       echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+       $ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
    
-       source ~/.bashrc
+       $ source ~/.bashrc
+       
+       $ gedit ~/.bashrc
+       
+          **In the bashrc file add the belowline at the end**
+          
+             source /home/your directory name/catkin_ws/devel/setup.bash
+          
+         Then save and exit.
    
   6)Let's create and build a catkin workspace
 
