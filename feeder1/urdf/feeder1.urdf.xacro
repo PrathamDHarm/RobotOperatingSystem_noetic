@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot  name="feeder1"  xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:include filename="$(find feeder1)/gazebo/feeder1.gazebo"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 -2.7756E-17 0.025"
+        rpy="0 0 0" />
+      <mass
+        value="0.60226" />
+      <inertia
+        ixx="0.00077609"
+        ixy="3.4547E-20"
+        ixz="6.1199E-21"
+        iyy="0.00068716"
+        iyz="-1.4067E-19"
+        izz="0.0012123" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fixed_link">
+    <inertial>
+      <origin
+        xyz="0.014638 0.0065769 -0.19406"
+        rpy="0 0 0" />
+      <mass
+        value="32.724" />
+      <inertia
+        ixx="0.46204"
+        ixy="6.1213E-06"
+        ixz="0.00021276"
+        iyy="0.33413"
+        iyz="-2.3422E-05"
+        izz="0.60985" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/fixed_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/fixed_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fixed_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_link">
+    <inertial>
+      <origin
+        xyz="-0.0011715 -0.69287 -6.5265E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.20036" />
+      <inertia
+        ixx="6.5904E-05"
+        ixy="-7.0923E-11"
+        ixz="-2.296E-09"
+        iyy="8.7668E-05"
+        iyz="-1.2712E-09"
+        izz="6.5911E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="continuous">
+    <origin
+      xyz="0.0018491 -0.33687 -0.004102"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="0.00014915 0.0043355 -7.3921E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.20036" />
+      <inertia
+        ixx="6.593E-05"
+        ixy="7.4883E-07"
+        ixz="3.2323E-09"
+        iyy="8.7642E-05"
+        iyz="1.1389E-09"
+        izz="6.591E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint"
+    type="continuous">
+    <origin
+      xyz="0.0018490628561556 -0.336867042326673 -0.00410200897064866"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="0.0344354798659534 0.999406922993033 0" />
+  </joint>
+  <link
+    name="front_link">
+    <inertial>
+      <origin
+        xyz="-0.45221 0.0019632 8.3911E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.20036" />
+      <inertia
+        ixx="8.7644E-05"
+        ixy="7.7103E-07"
+        ixz="4.1923E-10"
+        iyy="6.5934E-05"
+        iyz="-7.1036E-10"
+        izz="6.5912E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_joint"
+    type="continuous">
+    <origin
+      xyz="-0.22084 0.010463 -0.004102"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_link" />
+    <axis
+      xyz="-0.99969 0.025066 0" />
+  </joint>
+  <link
+    name="back_Link">
+    <inertial>
+      <origin
+        xyz="0.0043174 -0.0004229 2.0114E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.20036" />
+      <inertia
+        ixx="8.746E-05"
+        ixy="-2.1157E-06"
+        ixz="4.3699E-10"
+        iyy="6.6118E-05"
+        iyz="2.9577E-09"
+        izz="6.5905E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/back_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/back_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.22084 0.010463 -0.004102"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_Link" />
+    <axis
+      xyz="0.99522 -0.097653 0" />
+  </joint>
+  <link
+    name="screw_Link">
+    <inertial>
+      <origin
+        xyz="-0.0015611 -0.00022615 -0.16409"
+        rpy="0 0 0" />
+      <mass
+        value="1.2315" />
+      <inertia
+        ixx="0.017721"
+        ixy="-2.3472E-05"
+        ixz="0.00021038"
+        iyy="0.017666"
+        iyz="-8.4086E-05"
+        izz="0.006453" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/screw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://feeder1/meshes/screw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="screw_jont"
+    type="continuous">
+    <origin
+      xyz="0.0010208 0.0051405 -0.61232"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="screw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<launch>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find vrx_2019)/worlds/example_course.world"/>
+  
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find feeder1)/urdf/feeder1.urdf.xacro" />
+
+  <arg name="x" default="158" />
+  <arg name="y" default="108" />
+  <arg name="z" default="0.1" />
+  <arg name="P" default="0" />
+  <arg name="R" default="0" />
+  <arg name="Y" default="-2.76" />
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model feeder1 -param robot_description -x $(arg x) -y $(arg y) -z $(arg z) -P $(arg P) -R $(arg R) -Y $(arg Y)" />
+
+</launch>
