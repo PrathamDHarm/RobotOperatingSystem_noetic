@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<launch>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/ -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find omni_vehicle_urdf)/urdf/omni_vehicle_urdf.urdf" />
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model omni_vehicle_urdf -param robot_description" />
+  
+  <node name="left_motor_link" pkg="pid" type="controller" >
+      <param name="Kp" value="5.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.1" />
+      <param name="upper_limit" value="10" />
+      <param name="lower_limit" value="-10" />
+      <param name="windup_limit" value="10" />
+      <param name="max_loop_frequency" value="100.0" />
+      <param name="min_loop_frequency" value="100.0" />
+    </node>
+  
+  
+    <node name="servo_sim_node" pkg="pid" type="plant_sim" ns="left_wheel" output="screen" >
+      <param name="plant_order" value="2" />
+    </node>
+ 
+</launch>
+
