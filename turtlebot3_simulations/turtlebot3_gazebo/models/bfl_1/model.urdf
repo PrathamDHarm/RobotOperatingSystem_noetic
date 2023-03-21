@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<robot name="bfl_1">
+  <joint name="bfl_1__link_0_JOINT_0" type="revolute">
+    <parent link="bfl_1__link_0"/>
+    <child link="bfl_1__link_1"/>
+    <origin xyz="5.4971e-01 -6.7342e-01  4.4000e-04" rpy="-1.57019 -0.00661  1.54546"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="bfl_1__link_0_JOINT_1" type="revolute">
+    <parent link="bfl_1__link_0"/>
+    <child link="bfl_1__link_1_clone"/>
+    <origin xyz="-0.6462  -0.6747  -0.01576" rpy="1.62046 -0.00611  1.53547"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="bfl_1__link_0_JOINT_2" type="revolute">
+    <parent link="bfl_1__link_0"/>
+    <child link="bfl_1__link_1_clone_0"/>
+    <origin xyz="-6.4719e-01  7.0877e-01  4.4000e-04" rpy="1.5803  -0.00661  1.54546"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="bfl_1__link_0_JOINT_3" type="revolute">
+    <parent link="bfl_1__link_0"/>
+    <child link="bfl_1__link_1_clone_1"/>
+    <origin xyz="5.6365e-01 6.8420e-01 4.4000e-04" rpy="-1.57019 -0.00661  1.54546"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <link name="bfl_1__link_0">
+    <inertial>
+      <mass value="0.234905"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.086962" ixy="0" ixz="0" iyy="0.0198193" iyz="0" izz="0.106294"/>
+    </inertial>
+    <collision name="bfl_1__collision">
+      <origin xyz="-0.04757 -0.04486  0.01443" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 2.10474 0.111615"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_1__visual">
+      <origin xyz="-0.04757 -0.04486  0.01443" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 2.10474 0.111615"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_1__link_1">
+    <inertial>
+      <mass value="0.0479168"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000844516" ixy="0" ixz="0" iyy="0.000844516" iyz="0" izz="0.00129966"/>
+    </inertial>
+    <collision name="bfl_1__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_1__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_1__link_1_clone">
+    <inertial>
+      <mass value="0.0479168"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000844516" ixy="0" ixz="0" iyy="0.000844516" iyz="0" izz="0.00129966"/>
+    </inertial>
+    <collision name="bfl_1__collision">
+      <origin xyz="0 0 0" rpy="0   0.01 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_1__visual">
+      <origin xyz="0 0 0" rpy="0   0.01 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_1__link_1_clone_0">
+    <inertial>
+      <mass value="0.0479168"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000844516" ixy="0" ixz="0" iyy="0.000844516" iyz="0" izz="0.00129966"/>
+    </inertial>
+    <collision name="bfl_1__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_1__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_1__link_1_clone_1">
+    <inertial>
+      <mass value="0.0479168"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000844516" ixy="0" ixz="0" iyy="0.000844516" iyz="0" izz="0.00129966"/>
+    </inertial>
+    <collision name="bfl_1__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_1__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.232909" length="0.220806"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
